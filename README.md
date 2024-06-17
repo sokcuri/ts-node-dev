@@ -1,19 +1,22 @@
-# ts-node-dev
+# @sokcuri/ts-node-dev
+
+This is a forked project to enhancement of [ts-node-dev](https://github.com/wclr/ts-node-dev)
 
 > Tweaked version of [node-dev](https://github.com/fgnass/node-dev) that uses [ts-node](https://github.com/TypeStrong/ts-node) under the hood.
 
 It restarts target node process when any of required files changes (as standard `node-dev`) but shares [Typescript](https://github.com/Microsoft/TypeScript/) compilation process between restarts. This significantly increases speed of restarting comparing to `node-dev -r ts-node/register ...`, `nodemon -x ts-node ...` variations because there is no need to instantiate `ts-node` compilation each time.
 
 ## Install
-
-![npm (scoped)](https://img.shields.io/npm/v/ts-node-dev.svg?maxAge=86400) [![Build Status](https://travis-ci.com/wclr/ts-node-dev.svg?branch=master)](https://travis-ci.com/wclr/ts-node-dev)
-
 ```
-yarn add ts-node-dev --dev
+yarn add @sokcuri/ts-node-dev --dev
 ```
 
 ```
-npm i ts-node-dev --save-dev
+pnpm add @sokcuri/ts-node-dev -D
+```
+
+```
+npm i @sokcuri/ts-node-dev --save-dev
 ```
 
 ## Usage

@@ -13,6 +13,7 @@ export const getCompiledPath = (
     .update(fileName + code, 'utf8')
     .digest('hex')
   fileName = path.relative(cwd, fileName)
-  const hashed = fileName.replace(/[^\w]/g, '_') + '_' + hash + '.js'
+  fileName = path.basename(fileName)
+  const hashed = fileName + '_' + hash + '.js'
   return path.join(compiledDir, hashed)
 }

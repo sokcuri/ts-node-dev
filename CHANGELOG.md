@@ -1,5 +1,12 @@
 # ts-node-dev changelog
 
+## 2.1.0 (2024-06-17)
+
+- fix: fix to work in long path import
+
+
+# previous ts-node-dev changelog
+
 ## 1.1.3 (2021-02-25)
 
 - fix: update bin scripts paths

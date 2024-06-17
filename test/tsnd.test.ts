@@ -168,6 +168,13 @@ describe('ts-node-dev', function () {
     await ps.exit()
   })
 
+  it('should work on the long path import', async () => {
+    const ps = spawnTsNodeDev('--respawn --poll --quiet long-path.ts')
+    await ps.waitForLine(/ok/)
+    t.ok(true, 'ok')
+    await ps.exit()
+  })
+
   it('should handle resolveJsonModule option and load JSON modules', async () => {
     const cOptions = { resolveJsonModule: true }
     const ps = spawnTsNodeDev(
